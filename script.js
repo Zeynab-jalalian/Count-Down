@@ -13,6 +13,12 @@ function timer() {
     document.querySelector("#hour").innerHTML=hour;
     document.querySelector("#minute").innerHTML=minute;
     document.querySelector("#second").innerHTML=second;
+
+    if(diff<=0){
+        clearInterval(setInterval);
+        alert("Time's up!");
+        return;
+    }
 }
 timer();
-setInterval(timer,1000);
+let interValid=setInterval(timer,1000);
